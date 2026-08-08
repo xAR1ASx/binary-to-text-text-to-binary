@@ -1,7 +1,7 @@
 #Convertidor binario a texto(Nombres) y viceversa
 
 res = input("Ingrese 1 para convertir de binario a texto o 2 para convertir de texto a binario: ")
-
+numero_completo = ""
 if res == "1":
     binario = input("Ingrese el número binario: ")
     for numero in range(0, len(binario), 8):
@@ -16,5 +16,5 @@ else:
             decimal = ord(letra)
             binario = format(decimal, '08b')
             print(f"La letra '{letra}' es el numero '{decimal}' y en binario es '{binario}'")
-            
-    
+            numero_completo += binario
+        print("El texto completo en binario es: ", numero_completo)
